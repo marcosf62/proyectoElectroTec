@@ -1,0 +1,124 @@
+/* =====================
+   Tipografía y colores
+   ===================== */
+body {
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth; /* hace que el scroll sea suave */
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  color: #0a2f4f; /* azul oscuro eléctrico */
+}
+
+p {
+  color: #333;
+}
+
+/* Paleta de colores ElectroTec */
+:root {
+  --color-principal: #007bff;  /* azul eléctrico */
+  --color-secundario: #00c2cb; /* celeste domótica */
+  --color-oscuro: #0a2f4f;
+  --color-claro: #f8f9fa;
+}
+
+/* =====================
+   Navbar
+   ===================== */
+.navbar {
+  transition: background 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: var(--color-oscuro) !important;
+}
+
+/* =====================
+   Hero / Inicio
+   ===================== */
+/* Header con imagen de fondo */
+.header {
+  background: url("../img/trafo.jpeg") no-repeat center center/cover;
+  height: 100vh; /* ocupa toda la pantalla */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+}
+
+/* Capa oscura para mejorar contraste del texto */
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* oscurece un poco */
+  z-index: 1;
+}
+
+/* Asegura que el texto esté encima de la capa */
+.header .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Estilos para los textos dentro del header */
+
+/* Texto "Bienvenidos a" */
+.bienvenidos {
+  color: #ffffff; /* blanco */
+}
+
+/* Texto "Electro" en azul muy clarito */
+.electro {
+    color: #ff7b00; /* naranja intenso */
+  font-weight: bold;
+}
+
+
+/* Texto "Tec" en naranja */
+.tec {
+  color: #1e90ff; /* azul neón/eléctrico */
+  font-weight: bold;
+}
+
+/* Subtítulo en blanco */
+.subtitulo {
+  color: #ffffff;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.6); /* mejora legibilidad */
+}
+
+/* =====================
+   Servicios (cards)
+   ===================== */
+.card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+}
+
+/* =====================
+   Botones
+   ===================== */
+.btn-primary {
+  background-color: var(--color-principal);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-secundario);
+}
+
+/* =====================
+   Footer
+   ===================== */
+footer {
+  background-color: var(--color-oscuro);
+}
+
