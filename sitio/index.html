@@ -5,35 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ElectroTec - Servicios electricos y domotica</title>
     <link rel="icon" type="image/png" href="img/favicon.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 <body>
 
+
     <!-- barra de navegacion-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
+      <div class="container-fluid px-5">
+        <a class="navbar-brand" href="#inicio">
+            <img src="img/logo.png" alt="ElectroTec Logo" width="40" height="40" class="me-2">
+            <span style="color: orange;">Electro</span><span style="color: #007bff;">Tec</span>
+        </a>
 
-            <a class="navbar-brand" href="#inicio">
-                <img src="img/logo.png" alt="ElectroTec Logo" width="40" height="40" class="me-2">
-                <span style="color: orange;">Electro</span><span style="color: #007bff;">Tec</span>
-            </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="menu">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-
-                </ul>
-            </div>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+            </ul>
         </div>
+      </div>
     </nav>
+
+
 
     <!--Inicio-->
         <header id="inicio" class="header text-white text-center d-flex align-items-center">
@@ -47,62 +49,131 @@
         </div>
         </header>
 
-    <!--servicios-->
-     <section id="servicios" class="py-5">
-    <div class="container text-center">
-      <h2 class="mb-4">Nuestros Servicios</h2>
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 shadow">
-            <div class="card-body">
-              <h4 class="card-title">Instalaciones Eléctricas</h4>
-              <p class="card-text">Montaje, reparación y mantenimiento de redes eléctricas.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 shadow">
-            <div class="card-body">
-              <h4 class="card-title">Domótica</h4>
-              <p class="card-text">Automatización de iluminación, seguridad y climatización.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 shadow">
-            <div class="card-body">
-              <h4 class="card-title">Mantenimiento</h4>
-              <p class="card-text">Soporte técnico y revisiones periódicas para empresas y hogares.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- 🔵 Nosotros -->
+<!-- Servicios -->
+<section id="servicios" class="py-5 text-center">
+  <div class="container">
+    <h2 class="mb-5" style="color: orange;">Nuestros Servicios</h2>
+    
+    <div class="row justify-content-center g-4">
+
+      <!-- Instalaciones Eléctricas -->
+      <article class="col-md-4">
+        <div class="card h-100 shadow">
+          <figure class="m-4">
+            <i class="bi bi-lightning-charge-fill" style="font-size: 3rem; color:#ff7b00;"></i>
+          </figure>
+          <div class="card-body">
+            <h4 class="card-title">Instalaciones Eléctricas</h4>
+            <p class="card-text">Montaje, reparación y mantenimiento de redes eléctricas.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Domótica -->
+      <article class="col-md-4">
+        <div class="card h-100 shadow">
+          <figure class="m-4">
+            <i class="bi bi-house-fill" style="font-size: 3rem; color:#1e90ff;"></i>
+          </figure>
+          <div class="card-body">
+            <h4 class="card-title">Domótica</h4>
+            <p class="card-text">Automatización de iluminación, seguridad y climatización.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Mantenimiento -->
+      <article class="col-md-4">
+        <div class="card h-100 shadow">
+          <figure class="m-4">
+            <i class="bi bi-tools" style="font-size: 3rem; color:#00c2cb;"></i>
+          </figure>
+          <div class="card-body">
+            <h4 class="card-title">Mantenimiento</h4>
+            <p class="card-text">Soporte técnico y revisiones periódicas para empresas y hogares.</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Nosotros -->
   <section id="nosotros" class="bg-light py-5">
     <div class="container text-center">
-      <h2 class="mb-4">Sobre Nosotros</h2>
+      <h2 class="mb-4" style="color: #007bff;">Sobre Nosotros</h2>
       <p class="lead">En <strong>ElectroTec</strong> contamos con un equipo profesional especializado en electricidad y domótica. Brindamos soluciones modernas, seguras y eficientes, adaptadas a las necesidades de nuestros clientes.</p>
     </div>
   </section>
 
-  <!-- 🔵 Contacto -->
-  <section id="contacto" class="py-5">
-    <div class="text-center">
-      <a href="https://forms.gle/RtPMguCxQekRRDD57" target="_blank" class="btn btn-primary">
-        Enviar
-      </a>
-    </div>
-  </section>
 
-  <!-- 🔵 Footer -->
-  <footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">&copy; 2025 ElectroTec - Todos los derechos reservados</p>
+  <!--Equipo-->
+<section id="equipo" class="py-5 bg-light text-center">
+  <h2 class="mb-4">Nuestro equipo</h2>
+  <div class="row justify-content-center">
+
+
+    <!-- Marcos Altamirano -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow">
+        <img src="img/altamirano.jpeg" class="card-img-top" alt="Marcos Nicolas Altamirano">
+        <div class="card-body">
+          <h5 class="card-title">Marcos Nicolas Altamirano</h5>
+          <p class="card-text">Estudiante de programación con cursos en inteligencia artificial y bases de datos, desarrollando la web de ElectroTec.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Marcos Funes -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow">
+        <img src="img/funes.jpeg" class="card-img-top" alt="Marcos Abel Funes">
+        <div class="card-body">
+          <h5 class="card-title">Marcos Abel Funes</h5>
+          <p class="card-text">Electricista matriculado, operario de redes eléctricas media y baja tensión y estudiante de desarrollo de software.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!--Contacto -->
+<section id="contacto" class="py-5 text-center">
+    <a href="https://forms.gle/RtPMguCxQekRRDD57" target="_blank" class="btn-uiverse">
+        Enviar opiniones
+    </a>
+</section>
+
+
+
+  <!--Footer-->
+  <footer class="bg-dark text-center py-3">
+    <p class="mb-0" style="color: #cccccc;">&copy; 2025 ElectroTec - Todos los derechos reservados</p>
   </footer>
+
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+  const navbar = document.querySelector('.navbar');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) { // a partir de 100px de scroll
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+</script>
+
+
 </body>
 </html>
