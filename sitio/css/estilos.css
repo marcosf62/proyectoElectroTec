@@ -1,6 +1,4 @@
-/* =====================
-   Tipografía y colores
-   ===================== */
+/*Tipografía y colores*/
 body {
   font-family: 'Montserrat', sans-serif;
   scroll-behavior: smooth; /* scroll suave */
@@ -22,17 +20,16 @@ p {
   --color-secundario: #00c2cb; /* celeste domótica */
   --color-oscuro: #0a2f4f;
   --color-claro: #f8f9fa;
+  --color-naranja: #ff7b00;
 }
 
-/* =====================
-   Navbar
-   ===================== */
+/*Navbar*/
 .navbar {
   transition: all 0.3s ease;
 }
 
 .navbar.scrolled {
-  position: fixed;   /* se fija en la parte superior */
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
@@ -40,9 +37,7 @@ p {
   background-color: var(--color-oscuro);
 }
 
-/* =====================
-   Header con imagen de fondo
-   ===================== */
+/*Header con imagen de fondo*/
 .header {
   background: url("../img/bombas.jpeg") no-repeat center center/cover;
   height: 95vh; 
@@ -58,7 +53,7 @@ p {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* oscurece un poco */
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
@@ -73,12 +68,12 @@ p {
 }
 
 .electro {
-  color: #ff7b00; /* naranja intenso */
+  color: var(--color-naranja);
   font-weight: bold;
 }
 
 .tec {
-  color: #1e90ff; /* azul neón/eléctrico */
+  color: var(--color-principal);
   font-weight: bold;
 }
 
@@ -87,9 +82,7 @@ p {
   text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
 }
 
-/* =====================
-   Servicios (cards)
-   ===================== */
+/* Servicios (cards)*/
 .card {
   border: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -100,56 +93,35 @@ p {
   box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
 }
 
-/* =====================
-   Botones
-   ===================== */
-.btn-primary {
-  background-color: var(--color-principal);
-  border: none;
-}
-
-.btn-primary:hover {
-  background-color: var(--color-secundario);
-}
-
-/* Botón estilo Universe.io */
-.btn-uiverse {
-  background: linear-gradient(90deg, #ff7b00, #1e90ff);
+/* Botones principales estilo ElectroTec*/
+.btn-electrotec {
+  background-color: var(--color-naranja);
   border: none;
   color: white;
-  padding: 12px 25px;
-  font-size: 16px;
-  border-radius: 8px;
-  cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.btn-uiverse:hover {
+.btn-electrotec:hover {
+  background-color: var(--color-principal);
   transform: scale(1.05);
-  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* =====================
-   Footer
-   ===================== */
+/* Footer*/
 footer {
   background-color: var(--color-oscuro);
   color: #cccccc;
 }
 
-/* =====================
-   Imágenes en cards
-   ===================== */
+/*Imágenes en cards*/
 .card-img-top {
   width: 100%;
-  height: 450px; /* altura ajustable */
+  height: 450px;
   object-fit: cover;
   border-radius: 5px;
 }
 
-/* =====================
-   Animaciones y efectos
-   ===================== */
+/* Animaciones y efectos*/
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -165,4 +137,64 @@ h2 {
   text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
 }
 
+/* ajuste para el scroll de los anchors solo en las secciones de detalle */
+#instalaciones-detalle,
+#domotica-detalle,
+#mantenimiento-detalle {
+  scroll-margin-top: 80px; 
+}
+
+#servicios {
+  scroll-margin-top: 80px; 
+}
+
+#nosotros {
+  scroll-margin-top: 80px; 
+}
+
+.equipo-naranja {
+  background-color: #ff7b00; 
+}
+
+.equipo-azul {
+  background-color: #007bff; 
+}
+
+.btn-cotizador {
+  background-color: #007bff; /* color inicial */
+  color: white;
+  border: 1px solid #007bff;
+  transition: all 0.3s ease; /* efecto suave al pasar el mouse */
+}
+
+.btn-cotizador:hover {
+  background-color: #ff7b00; /* naranja */
+  border-color: #ff7b00;
+}
+
+/* Botón de volver */
+.btn-volver {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  color: #ff7b00;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-volver i {
+  margin-right: 0.4rem;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+/* Efecto hover */
+.btn-volver:hover {
+  color: #007bff;
+}
+
+.btn-volver:hover i {
+  transform: translateX(-5px);
+}
 

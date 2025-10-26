@@ -3,14 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ElectroTec - Servicios electricos y domotica</title>
+    <title>ElectroTec - Servicios eléctricos y domótica</title>
     <link rel="icon" type="image/png" href="img/favicon.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+      /* Efecto hover en iconos de detalle de servicios */
+      .detalle-servicio i {
+        transition: all 0.3s ease;
+      }
+
+      .detalle-servicio i:hover {
+        transform: scale(1.2);
+        color: #ff7b00;
+      }
+    </style>
 </head>
 <body>
-
 
     <!-- barra de navegacion-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -35,26 +46,21 @@
       </div>
     </nav>
 
-
-
     <!--Inicio-->
-        <header id="inicio" class="header text-white text-center d-flex align-items-center">
+    <header id="inicio" class="header text-white text-center d-flex align-items-center">
         <div class="container">
             <h1 class="display-3 fw-bold titulo-principal">
-            <span class="bienvenidos">Bienvenidos a</span> 
-            <span class="electro">Electro</span><span class="tec">Tec</span>
+              <span class="bienvenidos">Bienvenidos a</span> 
+              <span class="electro">Electro</span><span class="tec">Tec</span>
             </h1>
             <p class="lead subtitulo">Servicios Eléctricos y Domótica para el Hogar</p>
-
         </div>
-        </header>
-
+    </header>
 
 <!-- Servicios -->
 <section id="servicios" class="py-5 text-center">
   <div class="container">
     <h2 class="mb-5" style="color: orange;">Nuestros Servicios</h2>
-    
     <div class="row justify-content-center g-4">
 
       <!-- Instalaciones Eléctricas -->
@@ -66,7 +72,7 @@
           <div class="card-body">
             <h4 class="card-title">Instalaciones Eléctricas</h4>
             <p class="card-text">Montaje, reparación y mantenimiento de redes eléctricas.</p>
-            <a href="#instalaciones-detalle" class="btn btn-warning mt-3">Ver más</a>
+            <a href="#instalaciones-detalle" class="btn btn-electrotec mt-3">Ver más</a>
           </div>
         </div>
       </article>
@@ -80,11 +86,10 @@
           <div class="card-body">
             <h4 class="card-title">Domótica</h4>
             <p class="card-text">Automatización de iluminación, seguridad y climatización.</p>
-            <a href="#domotica-detalle" class="btn btn-primary mt-3">Ver más</a>
+            <a href="#domotica-detalle" class="btn btn-electrotec mt-3">Ver más</a>
           </div>
         </div>
       </article>
-
 
       <!-- Mantenimiento -->
       <article class="col-md-4">
@@ -95,7 +100,7 @@
           <div class="card-body">
             <h4 class="card-title">Mantenimiento</h4>
             <p class="card-text">Soporte técnico y revisiones periódicas para empresas y hogares.</p>
-            <a href="#mantenimiento-detalle" class="btn btn-info mt-3">Ver más</a>
+            <a href="#mantenimiento-detalle" class="btn btn-electrotec mt-3">Ver más</a>
           </div>
         </div>
       </article>
@@ -104,136 +109,206 @@
   </div>
 </section>
 
+
+
+
 <!-- Detalle Instalaciones Eléctricas -->
 <section id="instalaciones-detalle" class="py-5 bg-light">
-  <div class="container">
-    <h2 style="color: #ff7b00;">Instalaciones Eléctricas</h2>
+  <div class="container detalle-servicio text-center">
+    <figure class="d-flex justify-content-center align-items-center m-4">
+      <h2 style="color: #ff7b00; margin-right: 0.5rem;">Instalaciones Eléctricas</h2>
+      <i class="bi bi-lightning-charge-fill" style="font-size: 3rem; color:#ff7b00;"></i>
+    </figure>
     <p>En ElectroTec realizamos instalaciones eléctricas seguras y eficientes, incluyendo:</p>
-    <ul>
+    <ul class="list-unstyled">
       <li>Montaje de redes eléctricas residenciales y comerciales</li>
       <li>Reparación de fallas y cortocircuitos</li>
       <li>Actualización de instalaciones antiguas</li>
       <li>Asesoramiento en eficiencia energética</li>
     </ul>
+    <a href="cotizadorElectricidad.html" class="btn btn-cotizador mt-3">
+      <i class="bi bi-calculator"></i> Consultar con el cotizador
+    </a>
   </div>
 </section>
 
 <!-- Detalle Domótica -->
 <section id="domotica-detalle" class="py-5 bg-light">
-  <div class="container">
-    <h2 style="color: #1e90ff;">Domótica</h2>
+  <div class="container detalle-servicio text-center">
+    <figure class="d-flex justify-content-center align-items-center m-4">
+      <h2 style="color: #1e90ff; margin-right: 0.5rem;">Domótica</h2>
+      <i class="bi bi-house-fill" style="font-size: 3rem; color:#1e90ff;"></i>
+    </figure>
     <p>En ElectroTec ofrecemos soluciones de domótica para mejorar la comodidad y seguridad de tu hogar o empresa:</p>
-    <ul>
+    <ul class="list-unstyled">
       <li>Control inteligente de iluminación y persianas</li>
       <li>Sistemas de seguridad y cámaras conectadas</li>
       <li>Automatización de climatización</li>
       <li>Integración de dispositivos IoT para gestión remota</li>
     </ul>
+    <a href="cotizadorDomotica.html" class="btn btn-cotizador mt-3">
+      <i class="bi bi-calculator"></i> Consultar con el cotizador
+    </a>
   </div>
 </section>
 
-
 <!-- Detalle Mantenimiento -->
 <section id="mantenimiento-detalle" class="py-5 bg-light">
-  <div class="container">
-    <h2 style="color: #00c2cb;">Mantenimiento</h2>
+  <div class="container detalle-servicio text-center">
+    <figure class="d-flex justify-content-center align-items-center m-4">
+      <h2 style="color: #00c2cb; margin-right: 0.5rem;">Mantenimiento</h2>
+      <i class="bi bi-tools" style="font-size: 3rem; color:#00c2cb;"></i>
+    </figure>
     <p>Ofrecemos servicios de mantenimiento programado y soporte técnico para:</p>
-    <ul>
+    <ul class="list-unstyled">
       <li>Empresas e industrias</li>
       <li>Hogares y edificios residenciales</li>
       <li>Inspecciones periódicas de seguridad</li>
       <li>Revisión y reemplazo de equipos eléctricos</li>
     </ul>
+    <a href="cotizadorMantenimiento.html" class="btn btn-cotizador mt-3">
+      <i class="bi bi-calculator"></i> Consultar con el cotizador
+    </a>
   </div>
 </section>
 
 
-  <!-- Nosotros -->
-  <section id="nosotros" class="bg-light py-5">
-    <div class="container text-center">
-      <h2 class="mb-4" style="color: #007bff;">Sobre Nosotros</h2>
-      <p class="lead">En <strong>ElectroTec</strong> contamos con un equipo profesional especializado en electricidad y domótica. Brindamos soluciones modernas, seguras y eficientes, adaptadas a las necesidades de nuestros clientes.</p>
-    </div>
-  </section>
 
+<!-- Sobre Nosotros -->
+<section id="nosotros" style="background-color: #e6f0ff; padding: 5rem 0;">
+  <div class="container text-center">
+    <h2 class="mb-4" style="color: #007bff;">Sobre Nosotros</h2>
+    <p class="lead mb-5">
+      En <strong>ElectroTec</strong> combinamos experiencia, innovación y compromiso para ofrecer soluciones eléctricas y tecnológicas de alta calidad. 
+      Somos una empresa argentina que nació con el propósito de hacer que la energía, la automatización y la conectividad estén al servicio de las personas, 
+      de forma segura, eficiente y sustentable.
+    </p>
 
-  <!--Equipo-->
-  <section id="equipo" class="py-5 bg-light text-center">
-    <h2 class="mb-4">Nuestro equipo</h2>
-    <div class="row justify-content-center">
-
-
-      <!-- Marcos Altamirano -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow">
-          <img src="img/altamirano.jpeg" class="card-img-top" alt="Marcos Nicolas Altamirano">
-          <div class="card-body">
-            <h5 class="card-title">Marcos Nicolas Altamirano</h5>
-            <p class="card-text">Estudiante de programación con cursos en inteligencia artificial y bases de datos, desarrollando la web de ElectroTec.</p>
-          </div>
-        </div>
+    <div class="row justify-content-center text-start">
+      <!-- Historia -->
+      <div class="col-md-5 mb-4">
+        <h4 style="color: #ff7b00;">
+          <i class="bi bi-lightbulb-fill me-2"></i> Nuestra Historia
+        </h4>
+        <p>
+          Fundada en 2010 por un grupo de técnicos y profesionales apasionados por la tecnología, 
+          <strong>ElectroTec</strong> comenzó ofreciendo servicios de instalaciones eléctricas residenciales en la ciudad de Río Cuarto. 
+          Con esfuerzo, profesionalismo y un trato personalizado, la empresa fue creciendo y ganándose la confianza de clientes particulares y empresas locales.
+        </p>
+        <p>
+          A medida que la tecnología avanzaba, ampliamos nuestra propuesta hacia el campo de la domótica, incorporando soluciones de automatización 
+          para hogares y negocios. Hoy, contamos con un equipo multidisciplinario especializado en electricidad, redes, mantenimiento preventivo y sistemas inteligentes, 
+          ofreciendo un servicio integral y adaptado a las necesidades de cada cliente.
+        </p>
       </div>
 
+      <!-- Valores -->
+      <div class="col-md-5 mb-4">
+        <h4 style="color: #1e90ff;">
+          <i class="bi bi-people-fill me-2"></i> Nuestros Valores
+        </h4>
+        <p>
+          En <strong>ElectroTec</strong> creemos que el verdadero progreso se construye sobre la base de valores sólidos. 
+          Cada proyecto que emprendemos refleja nuestro compromiso con la excelencia y la confianza que depositan en nosotros nuestros clientes.
+        </p>
+        <ul class="list-unstyled">
+          <li><strong>🔌 Compromiso:</strong> trabajamos con responsabilidad y respeto en cada instalación y mantenimiento.</li>
+          <li><strong>💡 Innovación:</strong> incorporamos las últimas tecnologías para brindar soluciones modernas y seguras.</li>
+          <li><strong>⚙️ Calidad:</strong> garantizamos resultados duraderos utilizando materiales certificados y procesos estandarizados.</li>
+          <li><strong>🤝 Cercanía:</strong> valoramos el diálogo y la atención personalizada a cada cliente.</li>
+          <li><strong>🌱 Sustentabilidad:</strong> promovemos el uso racional de la energía y prácticas amigables con el medio ambiente.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <!-- Marcos Funes -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow">
-          <img src="img/funes.jpeg" class="card-img-top" alt="Marcos Abel Funes">
-          <div class="card-body">
-            <h5 class="card-title">Marcos Abel Funes</h5>
-            <p class="card-text">Electricista matriculado, operario de redes eléctricas media y baja tensión y estudiante de desarrollo de software.</p>
-          </div>
+
+
+<!-- Equipo -->
+<section id="equipo" class="py-5 bg-light text-center">
+  <h2 class="mb-4" style="color: #007bff;">Nuestro equipo</h2>
+  <div class="row justify-content-center">
+
+    <!-- Marcos Altamirano -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow equipo-naranja text-white">
+        <img src="img/altamirano.jpeg" class="card-img-top" alt="Marcos Nicolas Altamirano">
+        <div class="card-body">
+          <h5 class="card-title">Marcos Nicolas Altamirano</h5>
+          <p class="card-text text-white">Estudiante de programación con cursos en inteligencia artificial y bases de datos, desarrollando la web de ElectroTec.</p>
         </div>
       </div>
-
     </div>
-  </section>
 
-
-
-  <!--Contacto -->
-  <section id="contacto" class="py-5 text-center bg-light">
-    <h2 style="color:#007bff;">Contacto</h2>
-    <p>Puedes comunicarte con nosotros por los siguientes medios:</p>
-
-    <ul class="list-unstyled">
-      <li><i class="bi bi-telephone-fill"></i> Teléfono: +5493585139793</li>
-      <li><i class="bi bi-envelope-fill"></i> Email: electrotechargentina4@gmail.com</li>
-      <li><i class="bi bi-geo-alt-fill"></i> Dirección: Alejandro Roca 543,Rio Cuarto, Argentina</li>
-    </ul>
-
-    <div class="mt-3">
-      <a href="https://www.youtube.com/@ElectroTecArg" target="_blank" class="btn btn-primary me-2">
-        <i class="bi bi-youtube"></i> youtube
-      </a>
+    <!-- Marcos Funes -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow equipo-azul text-white">
+        <img src="img/funes.jpeg" class="card-img-top" alt="Marcos Abel Funes">
+        <div class="card-body">
+          <h5 class="card-title">Marcos Abel Funes</h5>
+          <p class="card-text text-white">Electricista matriculado, operario de redes eléctricas media y baja tensión y estudiante de desarrollo de software.</p>
+        </div>
+      </div>
     </div>
-  </section>
+
+  </div>
+</section>
 
 
+<!-- Contacto -->
+<section id="contacto" class="py-5 text-center bg-light">
+  <h2 style="color:#007bff;">Contacto</h2>
+  <p>Puedes comunicarte con nosotros por los siguientes medios:</p>
+
+  <ul class="list-unstyled">
+    <li><i class="bi bi-telephone-fill"></i> Teléfono: +5493585139793</li>
+    <li><i class="bi bi-envelope-fill"></i> Email: electrotecargentina4@gmail.com</li>
+    <li><i class="bi bi-geo-alt-fill"></i> Dirección: Alejandro Roca 543, Río Cuarto, Argentina</li>
+  </ul>
+
+  <div class="mt-3">
+    <a href="https://www.youtube.com/@ElectroTecArg" target="_blank" class="btn btn-primary me-2 btn-youtube">
+      <i class="bi bi-youtube"></i> YouTube
+    </a>
+  </div>
+</section>
+
+<style>
+  /* Efecto hover solo para el botón de YouTube */
+  .btn-youtube {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: all 0.3s ease; /* transición suave */
+  }
+
+  .btn-youtube:hover {
+    background-color: #ff7b00 !important;
+    border-color: #ff7b00 !important;
+    color: #fff !important; /* texto blanco */
+  }
+</style>
 
 
+<!-- Footer -->
+<footer class="bg-dark text-center py-3">
+  <p class="mb-0" style="color: #cccccc;">&copy; 2025 ElectroTec - Todos los derechos reservados</p>
+</footer>
 
-  <!--Footer-->
-  <footer class="bg-dark text-center py-3">
-    <p class="mb-0" style="color: #cccccc;">&copy; 2025 ElectroTec - Todos los derechos reservados</p>
-  </footer>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
+<script>
+const navbar = document.querySelector('.navbar');
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-  <script>
-  const navbar = document.querySelector('.navbar');
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) { // a partir de 100px de scroll
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  });
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 100) { // a partir de 100px de scroll
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
 </script>
-
 
 </body>
 </html>
