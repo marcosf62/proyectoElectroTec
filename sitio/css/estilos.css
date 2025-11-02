@@ -198,3 +198,58 @@ h2 {
   transform: translateX(-5px);
 }
 
+/* Tarjetas de productos */
+.producto-card {
+    height: 350px;                 /* Altura total de la tarjeta */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espacia imagen y texto uniformemente */
+    border-radius: 1rem;           /* Redondeo general de la tarjeta */
+    overflow: hidden;              /* Evita que la imagen sobresalga */
+}
+
+.producto-card img {
+    height: 200px;                 /* Altura fija de la imagen */
+    object-fit: contain;           /* La imagen se ajusta completa sin recortarse */
+    background: rgb(126, 31, 31);             /* Fondo blanco si la imagen no ocupa todo */
+    border-top-left-radius: 1rem;  /* Redondeo superior */
+    border-top-right-radius: 1rem;
+}
+
+.producto-card .card-body {
+    flex-grow: 1;                  /* Hace que el cuerpo ocupe el resto de la tarjeta */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+
+/* Sección Productos con fondo eléctrico */
+#productos {
+    background-image: url('../img/fondoProductos.jpg'); /* ruta relativa desde el CSS */
+    background-size: cover;            /* la imagen cubre todo el área */
+    background-position: center;       /* centrada */
+    background-attachment: fixed;      /* fija al hacer scroll */
+    padding: 5rem 0;                   /* espacio superior e inferior */
+    position: relative;                /* para overlay */
+    color: #fff;                       /* texto blanco */
+}
+
+/* Overlay semitransparente para mejorar contraste */
+#productos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3); /* oscurece un poco la imagen */
+    z-index: 1;
+}
+
+/* Contenido de la sección por encima del overlay */
+#productos .container {
+    position: relative;
+    z-index: 2;
+}
