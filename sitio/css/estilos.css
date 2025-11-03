@@ -1,9 +1,14 @@
 /*Tipografía y colores*/
+
+
 body {
   font-family: 'Montserrat', sans-serif;
-  scroll-behavior: smooth; /* scroll suave */
-  background-color: #baebe7; /* color de fondo ligeramente más oscuro que blanco */
+  scroll-behavior: smooth;
+  background: url("../img/fondo1.png") no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
 }
+
 
 h1, h2, h3, h4 {
   font-weight: 700;
@@ -37,16 +42,22 @@ p {
   background-color: var(--color-oscuro);
 }
 
-/*Header con imagen de fondo*/
+/* Header con imagen de fondo */
 .header {
-  background: url("../img/bombas.jpeg") no-repeat center center/cover;
-  height: 95vh; 
+  position: relative;
+  height: 95vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   color: white;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url("../img/bombas.jpeg") no-repeat center center/cover;
+
+  /* curva inferior */
+  clip-path: ellipse(130% 90% at 50% 10%);
 }
+
 
 .header::before {
   content: "";
