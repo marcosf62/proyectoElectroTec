@@ -264,3 +264,48 @@ h2 {
     position: relative;
     z-index: 2;
 }
+
+/* Precio de los servicios */
+.precio-servicio {
+  color: #ff7b00; /* Naranja por defecto */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Cuando la tarjeta esté activa (checkbox marcado) */
+.card-servicio.activo .precio-servicio {
+  color: #007bff; /* Azul */
+}
+
+/* Fondo personalizado para herramientas.html */
+body.pagina-herramientas #productos {
+  background-image: url('../img/mantenimiento3.avif');
+}
+
+/* --- Corrección para las cards de herramientas --- */
+.producto-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* hace que todas las tarjetas se estiren iguales */
+}
+
+.producto-card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.producto-card .card-title {
+  min-height: 48px; /* mantiene alineado el título aunque uno sea más largo */
+}
+
+.producto-card .card-text {
+  flex-grow: 1; /* el texto se adapta sin empujar el precio */
+}
+
+.producto-card .text-success {
+  margin-top: auto; /* mantiene el precio al final del card-body */
+}
+
