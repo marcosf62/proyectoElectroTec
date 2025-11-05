@@ -309,3 +309,12 @@ body.pagina-herramientas #productos {
   margin-top: auto; /* mantiene el precio al final del card-body */
 }
 
+/* Fondo fijo para Seguridad Eléctrica */
+.fondo-seguridad {
+    background: url('../img/segElectrica.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+.fondo-overlay {
+    background-color: rgba(0, 0, 0, 0.55);
+    min-height: 100vh;
+}
